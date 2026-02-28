@@ -1,0 +1,3 @@
+[workspace]
+members = ["programs/perpdex"]
+resolver = "2"
