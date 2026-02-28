@@ -63,6 +63,6 @@ export function FundingChart({ symbol, height = 150 }: FundingChartProps) {
     };
   }, [symbol, height]);
 
-  void chartRef;
+  void chartRef; // retained for potential future use
   return <div ref={containerRef} className="w-full" />;
 }

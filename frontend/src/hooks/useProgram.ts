@@ -135,6 +135,7 @@ export function useProgram() {
     return null;
   }, [wallet.publicKey, provider]);
 
+  // TODO: wire up these PDAs when connecting to on-chain program
   void getExchangePDA;
   void getUserAccountPDA;
 
