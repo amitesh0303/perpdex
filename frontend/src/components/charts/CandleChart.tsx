@@ -71,7 +71,7 @@ export function CandleChart({ symbol, height = 400 }: CandleChartProps) {
       resizeObserver.disconnect();
       chart.remove();
     };
-  }, [symbol, height]);
+  }, [symbol, height, price]);
 
   return <div ref={containerRef} className="w-full" />;
 }

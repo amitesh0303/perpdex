@@ -72,7 +72,7 @@ pub fn handler(ctx: Context<Liquidate>) -> Result<()> {
         false
     };
 
-    require!(is_liquidatable || margin_ratio_check, PerpDexError::InsufficientMargin);
+    require!(is_liquidatable || margin_ratio_check, PerpDexError::PositionNotLiquidatable);
 
     // Calculate liquidation fee
     let liquidation_fee_bps = ctx.accounts.exchange.liquidation_fee_bps as u64;

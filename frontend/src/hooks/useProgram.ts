@@ -110,9 +110,9 @@ export function useProgram() {
     if (!wallet.publicKey) throw new Error('Wallet not connected');
     setLoading(true);
     try {
+      // TODO: Call program.methods.addMargin(new BN(amount)).accounts({ position: positionPDA, ... }).rpc()
       await new Promise((r) => setTimeout(r, 1500));
-      void positionId;
-      void amount;
+      console.log('addMargin stub: positionId=%s amount=%d', positionId, amount);
     } finally {
       setLoading(false);
     }
@@ -122,9 +122,9 @@ export function useProgram() {
     if (!wallet.publicKey) throw new Error('Wallet not connected');
     setLoading(true);
     try {
+      // TODO: Call program.methods.removeMargin(new BN(amount)).accounts({ position: positionPDA, ... }).rpc()
       await new Promise((r) => setTimeout(r, 1500));
-      void positionId;
-      void amount;
+      console.log('removeMargin stub: positionId=%s amount=%d', positionId, amount);
     } finally {
       setLoading(false);
     }

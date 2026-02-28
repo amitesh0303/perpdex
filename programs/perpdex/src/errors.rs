@@ -24,6 +24,8 @@ pub enum PerpDexError {
     InvalidAmount,
     #[msg("Maintenance margin violation")]
     MaintenanceMarginViolation,
+    #[msg("Position is not liquidatable")]
+    PositionNotLiquidatable,
     #[msg("Invalid oracle account")]
     InvalidOracleAccount,
 }
