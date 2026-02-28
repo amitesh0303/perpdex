@@ -80,7 +80,7 @@ pub fn handler(
     // short: liq_price = entry_price + (margin / size * price_precision)
     let margin_per_unit = required_margin
         .checked_mul(PRICE_PRECISION)
-        .unwrap()
+        .unwrap_or(u64::MAX)
         .checked_div(size)
         .unwrap_or(0);
 
